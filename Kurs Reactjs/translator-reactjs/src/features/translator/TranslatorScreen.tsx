@@ -1,23 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import { useTranslations } from "../../lib/hooks";
 
-// Typy w TypeScript
-type TranslatorScreenProps = {
-	isActive: boolean;
-	age?: number; // znak ? = opcjonalnie (number && undefined)
-	title: string;
-	onClick(): void;
-	onClick2(): boolean;
-};
+export const TranslatorScreen: React.FunctionComponent = () => {
+	// Używanie hooka o nazwie useTranslation którego zaimportowaliśmy z kat. lib/hooks
+	const MyHook = useTranslations();
 
-export const TranslatorScreen: React.FunctionComponent<
-	TranslatorScreenProps
-	// Argumentami są właściwości typu TranslatorScreenProps
-> = ({ title, age }) => {
 	return (
+		// Komponent musi coś zwracać, można ustawić return null. W spanie za pomocą {} dostaje się do hooka useTranslations(), który jest w zmiennej o nazwie MyHook
 		<Container>
-			<p>Title is: {title}</p>
-			<p>Age is: {age}</p>
+			<span>{MyHook.appName}</span>
 		</Container>
 	);
 };

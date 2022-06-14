@@ -5,14 +5,7 @@ import { TranslatorScreen } from "../features/translator";
 export const App = () => (
 	<ThemeProvider theme={theme}>
 		<AppContainer>
-			<TranslatorScreen
-				// TS Przekazywanie props z pliku TranslatorScreen.tsx
-				title="Hello App"
-				onClick={() => {}}
-				isActive={false}
-				onClick2={() => true}
-				age={12}
-			/>
+			<TranslatorScreen />
 		</AppContainer>
 	</ThemeProvider>
 );
