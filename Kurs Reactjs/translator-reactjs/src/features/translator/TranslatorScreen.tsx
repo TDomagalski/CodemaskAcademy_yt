@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useTranslations } from "../../lib/hooks";
+import { useTranslations } from "lib/hooks";
 
 export const TranslatorScreen: React.FunctionComponent = () => {
 	// Używanie hooka o nazwie useTranslation którego zaimportowaliśmy z kat. lib/hooks
