@@ -4,9 +4,10 @@
 }
 
 body {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 50px 1fr 2fr;
-      grid-template-columns: 50px 1fr 2fr;
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,10 +1,18 @@
 import styled, { ThemeProvider } from "styled-components";
 import { theme } from "../lib/styles";
+import { TranslatorScreen } from "../features/translator";
 
 export const App = () => (
 	<ThemeProvider theme={theme}>
 		<AppContainer>
-			<span>Hello World!!!</span>
+			<TranslatorScreen
+				// TS Przekazywanie props z pliku TranslatorScreen.tsx
+				title="Hello App"
+				onClick={() => {}}
+				isActive={false}
+				onClick2={() => true}
+				age={12}
+			/>
 		</AppContainer>
 	</ThemeProvider>
 );
