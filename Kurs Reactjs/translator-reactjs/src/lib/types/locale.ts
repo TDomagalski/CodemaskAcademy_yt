@@ -1,3 +1,9 @@
 export type Dictionary = {
-	appName: string;
+	components: {
+		header: {
+			github: string;
+			linkedin: string;
+			title: string;
+		};
+	};
 };
