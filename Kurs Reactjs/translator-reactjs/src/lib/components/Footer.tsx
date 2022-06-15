@@ -5,9 +5,14 @@ import styled from "styled-components";
 export const Footer = () => {
 	const T = useTranslations();
 
+	//POBIERAMY ROK W JS
+	const year = new Date().getFullYear();
+
 	return (
 		<FooterContainer>
-			<CodemaskAcademy>&copy; 2022 {T.companyName}</CodemaskAcademy>
+			<CodemaskAcademy>
+				&copy; {year} {T.companyName}
+			</CodemaskAcademy>
 			<LinkContainer>
 				<Link href={APP_CONFIG.FLAT_ICON_URL} target="_blank">
 					{T.components.footer.flatIcon}
