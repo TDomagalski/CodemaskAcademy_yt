@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { TextInput } from "lib/components"
 // import { useTranslations } from "lib/hooks";
 
 export const TranslatorScreen: React.FunctionComponent = () => {
@@ -9,7 +10,10 @@ export const TranslatorScreen: React.FunctionComponent = () => {
 	return (
 		// Komponent musi coś zwracać, można ustawić return null. W spanie za pomocą {} dostaje się do hooka useTranslations(), który jest w zmiennej o nazwie T
 		<Container>
-			<span>Hello World</span>
+			<TranslatorContainer>
+				<TextInput />
+				<TextInput />
+			</TranslatorContainer>
 		</Container>
 	);
 };
@@ -20,3 +24,10 @@ const Container = styled.div`
 	flex: 1;
 	color: ${({ theme }) => theme.colors.typography};
 `;
+
+const TranslatorContainer = styled.div`
+	display: flex;
+  	justify-content: space-around;
+  	margin-top: 50px;
+  	
+`
