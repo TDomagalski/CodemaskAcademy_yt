@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {Confidence, Loader, SelectLanguage, TextInput} from "lib/components"
+import {Confidence, Loader, SelectLanguage, TextInput, ExchangeLanguage, TextCounter} from "lib/components"
 // import { useTranslations } from "lib/hooks";
 
 export const TranslatorScreen: React.FunctionComponent = () => {
@@ -17,11 +17,22 @@ export const TranslatorScreen: React.FunctionComponent = () => {
 					<LoaderContainer>
 						<Loader />
 					</LoaderContainer>
-					<Confidence />
+					<InputFooter>
+						<Confidence />
+						<TextCounter />
+					</InputFooter>
 				</InputContainer>
+				<ExchangeLanguage />
 				<InputContainer>
 					<SelectLanguage />
 					<TextInput />
+					<LoaderContainer>
+						<Loader />
+					</LoaderContainer>
+					<InputFooter>
+						<Confidence />
+						<TextCounter />
+					</InputFooter>
 				</InputContainer>
 			</TranslatorContainer>
 		</Container>
@@ -49,4 +60,10 @@ const InputContainer = styled.div`
 
 const LoaderContainer = styled.div`
 	padding: 0 10px;
+`
+
+const InputFooter = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
