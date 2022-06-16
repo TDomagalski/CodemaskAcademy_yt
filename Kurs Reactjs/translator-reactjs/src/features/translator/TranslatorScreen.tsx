@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {Confidence, Loader, SelectLanguage, TextInput, ExchangeLanguage, TextCounter} from "lib/components"
+import {Confidence, Loader, SelectLanguage, TextInput, ExchangeLanguage, TextCounter, Counter} from "lib/components"
 // import { useTranslations } from "lib/hooks";
 
 export const TranslatorScreen: React.FunctionComponent = () => {
@@ -10,36 +10,46 @@ export const TranslatorScreen: React.FunctionComponent = () => {
 	return (
 		// Komponent musi coś zwracać, można ustawić return null. W spanie za pomocą {} dostaje się do hooka useTranslations(), który jest w zmiennej o nazwie T
 		<Container>
-			<TranslatorContainer>
-				<InputContainer>
-					<SelectLanguage />
-					<TextInput />
-					<LoaderContainer>
-						<Loader />
-					</LoaderContainer>
-					<InputFooter>
-						<Confidence />
-						<TextCounter />
-					</InputFooter>
-				</InputContainer>
-				<ExchangeLanguage />
-				<InputContainer>
-					<SelectLanguage />
-					<TextInput />
-					<LoaderContainer>
-						<Loader />
-					</LoaderContainer>
-					<InputFooter>
-						<Confidence />
-						<TextCounter />
-					</InputFooter>
-				</InputContainer>
-			</TranslatorContainer>
+			<Counter initialValue={0} />
+			<Container2>
+				<TranslatorContainer>
+					<InputContainer>
+						<SelectLanguage />
+						<TextInput />
+						<LoaderContainer>
+							<Loader />
+						</LoaderContainer>
+						<InputFooter>
+							<Confidence />
+							<TextCounter />
+						</InputFooter>
+					</InputContainer>
+					<ExchangeLanguage />
+					<InputContainer>
+						<SelectLanguage />
+						<TextInput />
+						<LoaderContainer>
+							<Loader />
+						</LoaderContainer>
+						<InputFooter>
+							<Confidence />
+							<TextCounter />
+						</InputFooter>
+					</InputContainer>
+				</TranslatorContainer>
+			</Container2>
 		</Container>
 	);
 };
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+`;
+
+const Container2 = styled.div`
 	display: flex;
 	flex-direction: column;
 	flex: 1;
@@ -50,7 +60,7 @@ const TranslatorContainer = styled.div`
 	display: flex;
   	justify-content: space-around;
   	margin-top: 50px;
-  	
+  	flex-wrap: wrap;
 `
 
 const InputContainer = styled.div`
@@ -67,3 +77,4 @@ const InputFooter = styled.div`
   justify-content: space-between;
   align-items: center;
 `
+
