@@ -10,6 +10,7 @@ export const TranslatorScreen: React.FunctionComponent = () => {
 	return (
 		// Komponent musi coś zwracać, można ustawić return null. W spanie za pomocą {} dostaje się do hooka useTranslations(), który jest w zmiennej o nazwie T
 		<Container>
+			
 			<TranslatorContainer>
 				<InputContainer>
 					<SelectLanguage />
