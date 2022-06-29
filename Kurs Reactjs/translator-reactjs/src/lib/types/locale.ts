@@ -1,14 +1,22 @@
 export type Dictionary = {
-	companyName: string;
+	companyName: string,
 	components: {
 		header: {
-			github: string;
-			linkedin: string;
-			title: string;
-		};
+			title: string,
+			github: string,
+			linkedin: string,
+		},
 		footer: {
-			flatIcon: string;
-			libreTranslate: string;
-		};
-	};
+			flatIcon: string,
+			libreTranslate: string,
+		},
+		message: {
+			tryAgain: string,
+		}
+	},
+	screen: {
+		translator: {
+			loading: string
+		}
+	},
 };

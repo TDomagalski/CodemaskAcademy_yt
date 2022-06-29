@@ -1,6 +1,6 @@
-import { useState} from "react";
+import { useState } from "react";
 import {Language} from "lib/models";
-import {APP_CONFIG} from "../../lib/config";
+import {APP_CONFIG} from "lib/config";
 
 export const useSupportedLanguages = (
 	onSuccess: (language: Array<Language>) => void
